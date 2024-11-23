@@ -4,6 +4,8 @@ import viteLogo from "/vite.svg";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Ribbon from "./components/Ribbon";
+import About from "./pages/About";
+import Products from "./pages/Products";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +18,12 @@ function App() {
           <Home />
         </section>
         <Ribbon />
+        <section id="about" className="">
+          <About />
+        </section>
+        <section id="product" className="">
+          <Products />
+        </section>
       </div>
     </>
   );

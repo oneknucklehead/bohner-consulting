@@ -7,7 +7,13 @@ import "../assets/styles/Navbar.css";
 
 const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
-  const navbarTags = ["Product", "About Us", "Trust", "Clients", "Contact"];
+  const navbarTags = [
+    { name: "Product", link: "product" },
+    { name: "About Us", link: "about" },
+    { name: "Trust", link: "trust" },
+    { name: "Clients", link: "client" },
+    { name: "Contact", link: "contact" },
+  ];
 
   return (
     <div className="fixed z-50 w-full top-0 ">
@@ -32,14 +38,14 @@ const Navbar = () => {
               {navbarTags.map((tags, index) => (
                 <li key={index} className="p-1 cursor-pointer">
                   <Link
-                    to={`${tags}`}
+                    to={`${tags.link}`}
                     smooth={true}
                     duration={500}
                     activeClass="font-bold"
                     spy={true}
                     offset={-62}
                   >
-                    {tags}
+                    {tags.name}
                   </Link>
                 </li>
               ))}
@@ -74,14 +80,14 @@ const Navbar = () => {
                     className="flex justify-center w-full py-4 hover:bg-[#7AB3E84A]"
                   >
                     <Link
-                      to={`${tags}`}
+                      to={`${tags.link}`}
                       smooth={true}
                       duration={500}
                       activeClass="font-semibold"
                       spy={true}
                       offset={-70}
                     >
-                      {tags}
+                      {tags.name}
                     </Link>
                   </li>
                 ))}
