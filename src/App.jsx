@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
+import Ribbon from "./components/Ribbon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
         <section id="home" className="">
           <Home />
         </section>
+        <Ribbon />
       </div>
     </>
   );

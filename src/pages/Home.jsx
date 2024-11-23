@@ -3,6 +3,16 @@ import Container from "../components/Container";
 import img1 from "../assets/images/img1.jpg";
 import img2 from "../assets/images/img2.jpg";
 
+import Autoplay from "embla-carousel-autoplay";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 const Home = () => {
   const navbarHeight = 86;
 
@@ -120,19 +130,23 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0F75BC]">
-      <Container>
+    <div className="bg-[#0F75BC]">
+      <div className="px-8 sm:px-12 max-w-[1000px] xl:max-w-[1200px] mx-auto">
         <div
-          className={`flex justify-center gap-8 items-center h-screen w-full flex-col  pt-[86px]`}
+          className={`flex justify-center gap-8 items-center h-screen w-full flex-col  py-[86px]`}
         >
-          <h1 className="text-white text-6xl">Revolutionize your workspace</h1>
-          <div className="text-white grid grid-cols-12 gap-4">
-            <div className="col-span-5 flex flex-col gap-2">
-              <p className="font-light text-lg">With bohner consulting</p>
-              <h3 className="text-3xl font-semibold">
+          <h1 className="text-white text-3xl sm:text-4xl  md:text-6xl text-center">
+            Revolutionize your workspace
+          </h1>
+          <div className="text-white grid grid-cols-12 max-h-[500px] items-center justify-center gap-4">
+            <div className="col-span-12 sm:col-span-6 xl:col-span-5 flex flex-col gap-2">
+              <p className="font-light text-sm sm:text-lg">
+                With bohner consulting
+              </p>
+              <h3 className="text-xl sm:text-3xl font-semibold">
                 Transform brands by digital products
               </h3>
-              <p className="text-lg">
+              <p className="text-sm sm:text-base lg:text-lg">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -142,92 +156,71 @@ const Home = () => {
                 Show products
               </button>
             </div>
-            <div className="col-span-7 grid grid-cols-2">
-              <div className="bg-white/50 flex flex-col gap-2 justify-between rounded-lg p-5">
-                {/* <div className=""> */}
-                <p className="text-2xl">We Provide</p>
-                {provide.map((unit, index) => (
-                  <div
-                    key={index}
-                    className="bg-white p-2 rounded-lg flex items-center gap-2"
-                  >
-                    <span className="bg-[#0F75BC]/50 p-2 rounded-md">
-                      {unit.logo}
-                    </span>
-
-                    <p className="text-[#0F75BC] font-semibold">{unit.tag}</p>
-                  </div>
-                ))}
-                {/* </div> */}
-              </div>
-              <div>
-                <div className="bg-white rounded-lg p-5 text-[#0F75BC] flex flex-col justify-center items-center">
-                  <h1 className="text-4xl font-semibold">150+</h1>
-                  <p>Projects have already been completed successfully</p>
-                </div>
-                <div>
-                  <div className="max-w-2xl m-auto">
+            <div className="col-span-12 sm:col-span-6 xl:col-span-7">
+              <div className=" grid xl:grid-cols-2 gap-4 ">
+                <div className="bg-white/50 flex flex-col gap-2 justify-between rounded-lg p-5">
+                  {/* <div className=""> */}
+                  <p className="text-lg md:text-2xl">We Provide</p>
+                  {provide.map((unit, index) => (
                     <div
-                      id="default-carousel"
-                      className="relative mb-4 mt-4 ml-4"
-                      data-carousel="static"
+                      key={index}
+                      className="bg-white p-1 md:p-2 rounded-lg flex items-center gap-2"
                     >
-                      <div className="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-                        <div
-                          className="hidden duration-700 ease-in-out"
-                          data-carousel-item
-                        >
-                          <span className="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">
-                            First Slide
-                          </span>
-                          <img
-                            src={img1}
-                            className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                            alt="..."
-                          />
-                        </div>
-                        <div
-                          className="hidden duration-700 ease-in-out"
-                          data-carousel-item
-                        >
-                          <img
-                            src={img2}
-                            className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
-                            alt="..."
-                          />
-                        </div>
-                      </div>
-                      <div className="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                        <button
-                          type="button"
-                          className="w-3 h-3 rounded-full"
-                          aria-current="false"
-                          aria-label="Slide 1"
-                          data-carousel-slide-to="0"
-                        ></button>
-                        <button
-                          type="button"
-                          className="w-3 h-3 rounded-full"
-                          aria-current="false"
-                          aria-label="Slide 2"
-                          data-carousel-slide-to="1"
-                        ></button>
-                        <button
-                          type="button"
-                          className="w-3 h-3 rounded-full"
-                          aria-current="false"
-                          aria-label="Slide 3"
-                          data-carousel-slide-to="2"
-                        ></button>
-                      </div>
+                      <span className="block bg-[#0F75BC]/50 p-1 md:p-2 rounded-md">
+                        {unit.logo}
+                      </span>
+
+                      <p className="text-[#0F75BC] text-sm md:text-base font-semibold">
+                        {unit.tag}
+                      </p>
                     </div>
+                  ))}
+                  {/* </div> */}
+                </div>
+                <div className="hidden xl:flex h-full flex-col gap-4">
+                  <div className="bg-white h-1/2 rounded-lg p-5 text-[#0F75BC] flex flex-col justify-center items-center">
+                    <h1 className="text-4xl font-semibold">150+</h1>
+                    <p className="text-center pt-4">
+                      Projects have already been completed successfully
+                    </p>
+                  </div>
+                  <div className="flex h-1/2">
+                    <img
+                      src={img1}
+                      alt="Image 1"
+                      className="aspect-square max-h-[250px] rounded-lg object-cover w-full"
+                    />
+                    {/* <Carousel
+                    plugins={[
+                      Autoplay({
+                        delay: 2000,
+                      }),
+                    ]}
+                  >
+                    <CarouselContent className="rounded-lg">
+                      <CarouselItem className="">
+                        <img
+                          src={img1}
+                          alt="Image 1"
+                          className="aspect-square rounded-lg object-cover w-full h-full"
+                        />
+                      </CarouselItem>
+                      <CarouselItem className="">
+                        <img
+                          src={img2}
+                          alt="Image 2"
+                          className="aspect-square rounded-lg object-cover w-full h-full"
+                        />
+                      </CarouselItem>
+                    </CarouselContent>
+                  </Carousel> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };
