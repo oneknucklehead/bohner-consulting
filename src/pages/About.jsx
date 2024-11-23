@@ -4,9 +4,9 @@ import img from "../assets/images/about.jpg";
 
 const About = () => {
   return (
-    <div>
+    <div className="px-8 md:px-12 mx-auto">
       <Container>
-        <div className="grid gap-4 grid-cols-2 py-12">
+        <div className="grid gap-4 grid-cols-1 justify-center items-center md:grid-cols-2 py-12">
           <div className="">
             <div className="flex justify-center py-8">
               <div className="relative rounded-lg">
@@ -25,7 +25,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="ml-8 flex flex-col justify-center">
+          <div className="flex flex-col justify-center">
             <h2 className="text-3xl font-light mb-4">Why us?</h2>
             <h3 className="text-4xl font-semibold text-gray-900 mb-4">
               We make products with infinite possibilities
