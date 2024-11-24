@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Stats from "./pages/Stats";
 import Clients from "./pages/Clients";
-import ContactSection from "./pages/Contact";
+import Contact from "./pages/Contact";
 import FooterSection from "./components/Footer";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
           <Clients />
         </section>
         <section id="contact" className="">
-          <ContactSection />
+          <Contact />
         </section>
         <FooterSection />
       </div>

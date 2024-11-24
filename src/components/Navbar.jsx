@@ -8,8 +8,8 @@ import "../assets/styles/Navbar.css";
 const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const navbarTags = [
-    { name: "Product", link: "product" },
     { name: "About Us", link: "about" },
+    { name: "Product", link: "product" },
     { name: "Trust", link: "trust" },
     { name: "Clients", link: "client" },
     { name: "Contact", link: "contact" },
@@ -43,7 +43,7 @@ const Navbar = () => {
                     duration={500}
                     activeClass="font-bold"
                     spy={true}
-                    offset={-62}
+                    offset={-100}
                   >
                     {tags.name}
                   </Link>

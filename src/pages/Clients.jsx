@@ -13,14 +13,17 @@ import img4 from "../assets/images/clients/pic4.png";
 const Clients = () => {
   const clients = [img1, img2, img3, img4];
   return (
-    <div className="bg-[#0F75BC]">
+    <div className="bg-[#0F75BC] px-8 md:px-12">
       <Container>
-        <div className="grid grid-cols-4 gap-4 py-12">
-          <div className="col-span-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 py-12">
+          <div className="col-span-1 md:col-span-2 xl:col-span-3">
             <Carousel>
               <CarouselContent>
                 {clients.map((client, index) => (
-                  <CarouselItem key={index} className="basis-1/3 rounded-lg">
+                  <CarouselItem
+                    key={index}
+                    className=" md:basis-1/2 xl:basis-1/3 rounded-lg"
+                  >
                     <ClientCard imgSrc={client} />
                   </CarouselItem>
                 ))}
@@ -28,12 +31,12 @@ const Clients = () => {
             </Carousel>
           </div>
           <div className="col-span-1">
-            <div className="text-white  flex flex-col justify-center h-full gap-3">
+            <div className="text-white text-sm lg:text-base flex flex-col justify-center h-full gap-3">
               <p className="font-light">Our clients</p>
-              <h3 className="font-semibold text-3xl">
+              <h3 className="font-semibold text-2xl lg:text-3xl">
                 Our innovative solutions are designed to
               </h3>
-              <p className="text-lg">
+              <p className="text-sm lg:text-lg">
                 We provide to enhance your lorem ipsum We provide to enhance
                 your lorem ipsum
               </p>

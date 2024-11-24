@@ -26,11 +26,13 @@ const About = () => {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-light mb-4">Why us?</h2>
-            <h3 className="text-4xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl lg:text-2xl xl:text-3xl font-light mb-2 xl:mb-4">
+              Why us?
+            </h2>
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-900 mb-2 xl:mb-4">
               We make products with infinite possibilities
             </h3>
-            <p className="text-lg leading-relaxed">
+            <p className="text-sm lg:text-base xl:text-lg leading-relaxed">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of

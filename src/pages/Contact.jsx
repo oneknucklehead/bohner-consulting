@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Container from "../components/Container.jsx";
 import "../assets/styles/Contact.css";
 import axios from "axios";
-const ContactSection = () => {
+const Contact = () => {
   const [code, setCode] = useState(91);
   const [name, setName] = useState("");
   const [nameErr, setNameErr] = useState(null);
@@ -84,16 +84,18 @@ const ContactSection = () => {
     console.log("code : " + code.toString().length * 8);
   }, [code]);
   return (
-    <div className="w-[80%] h-fit mx-auto">
+    <div className="h-fit px-8 md:px-12 mx-auto">
       <div className="grid grid-cols-1 py-12 xl:grid-cols-2  gap-10">
         {/* CONTACT SECTION */}
         <div className="w-full flex flex-col gap-2  lg:w-[75%] mx-auto">
-          <h3 className="text-4xl font-bold">Contact Us Now!</h3>
-          <p className="">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            Contact Us Now!
+          </h3>
+          <p className="text-sm sm:text-base md:text-lg">
             Fill the form with your requirements & we will get back to you!
           </p>
           <div className="">
-            <p className="py-2 pl-4">Name</p>
+            <p className="py-2 pl-4 text-sm md:text-base">Name</p>
             <input
               onChange={(e) => setName(e.target.value)}
               name="name"
@@ -105,7 +107,7 @@ const ContactSection = () => {
             )}
           </div>
           <div>
-            <p className="py-2 pl-4">Company Name</p>
+            <p className="py-2 pl-4 text-sm md:text-base">Company Name</p>
             <input
               onChange={(e) => setCompName(e.target.value)}
               name="companyName"
@@ -117,10 +119,10 @@ const ContactSection = () => {
             )}
           </div>
           <div>
-            <p className="py-2 pl-4">Phone number</p>
+            <p className="py-2 pl-4 text-sm md:text-base">Phone number</p>
             {/* <input className="bg-[#7AB3E84A] focus:outline-[#095DAB] p-3 px-4 rounded-full" /> */}
             <div className="flex text-black">
-              <div className="country-code font-semibold pr-4 text-[#095DAB] bg-[#75CDFFA1] p-2 flex items-center rounded-s-full">
+              <div className="country-code text-sm md:text-base font-semibold pr-4 text-[#095DAB] bg-[#75CDFFA1] p-2 flex items-center rounded-s-full">
                 +91
                 {/* <input
                   type="number"
@@ -148,7 +150,7 @@ const ContactSection = () => {
             )}
           </div>
           <div>
-            <p className="py-2 pl-4">E-mail ID</p>
+            <p className="py-2 pl-4 text-sm md:text-base">E-mail ID</p>
             <input
               onChange={(e) => setEmail(e.target.value)}
               name="email"
@@ -159,7 +161,9 @@ const ContactSection = () => {
             )}
           </div>
           <div>
-            <p className="py-2 pl-4">Additional Details/ Requirements</p>
+            <p className="py-2 pl-4 text-sm md:text-base">
+              Additional Details/ Requirements
+            </p>
             <textarea
               rows={6}
               onChange={(e) => setMessage(e.target.value)}
@@ -174,7 +178,7 @@ const ContactSection = () => {
           <div className="w-[60%] 2xl:w-[50%] py-2">
             <button
               onClick={handleSubmit}
-              className="bg-[#095DAB] text-white w-full px-8 py-3 font-semibold text-lg 2xl:text-xl rounded-full"
+              className="bg-[#095DAB] text-sm md:text-lg text-white w-full px-8 py-3 font-semibold 2xl:text-xl rounded-full"
             >
               {loader ? (
                 <div className="">
@@ -205,7 +209,7 @@ const ContactSection = () => {
           ></iframe> */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.005328887216!2d88.3840591759984!3d22.54147313410915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027695e69aaaab%3A0xefec1a5722ccf2a0!2sClick%20Baitz!5e0!3m2!1sen!2sin!4v1732441836770!5m2!1sen!2sin"
-            className="w-full h-full rounded-xl focus:outline-none"
+            className="w-full min-h-[300px] h-full rounded-xl focus:outline-none"
             allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -220,4 +224,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;

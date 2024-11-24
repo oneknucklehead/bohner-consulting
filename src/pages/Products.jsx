@@ -95,11 +95,11 @@ const Products = () => {
       <Container>
         <div className="flex flex-col gap-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4">
-            <h3 className="text-4xl font-semibold">
+            <h3 className=" text-2xl lg:text-3xl xl:text-4xl font-semibold">
               Our new exclusive collections
             </h3>
 
-            <p>
+            <p className="text-sm lg:text-base xl:text-lg">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s
@@ -110,13 +110,13 @@ const Products = () => {
               <button
                 key={index}
                 onClick={() => handleFiltering(tag)}
-                className={`
+                className={`text-sm xl:text-base
               ${
                 tag === filterItem
                   ? "bg-[#0F75BC] text-white"
                   : "text-[#0F75BC] bg-white"
               }
-              py-3 px-4 rounded-full font-semibold capitalize`}
+              py-2 px-3 xl:py-3 xl:px-4 rounded-full font-semibold capitalize`}
               >
                 {tag}
               </button>

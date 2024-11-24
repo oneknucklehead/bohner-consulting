@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Link } from "react-scroll";
 
 const Home = () => {
   const navbarHeight = 86;
@@ -133,7 +134,7 @@ const Home = () => {
     <div className="bg-[#0F75BC]">
       <div className="px-8 sm:px-12 max-w-[1000px] xl:max-w-[1200px] mx-auto">
         <div
-          className={`flex justify-center gap-8 items-center h-screen w-full flex-col  py-[86px]`}
+          className={`flex justify-center gap-8 items-center min-h-screen w-full flex-col  py-[86px]`}
         >
           <h1 className="text-white text-3xl sm:text-4xl  md:text-6xl text-center">
             Revolutionize your workspace
@@ -152,9 +153,17 @@ const Home = () => {
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book
               </p>
-              <button className="py-2 rounded-lg bg-white text-[#0F75BC]">
+              <Link
+                to="product"
+                className="cursor-pointer py-2 text-center rounded-lg bg-white text-[#0F75BC]"
+                smooth={true}
+                duration={500}
+                // activeClass="font-bold"
+                // spy={true}
+                offset={-100}
+              >
                 Show products
-              </button>
+              </Link>
             </div>
             <div className="col-span-12 sm:col-span-6 xl:col-span-7">
               <div className=" grid xl:grid-cols-2 gap-4 ">
