@@ -75,21 +75,18 @@ const Navbar = () => {
                   <div className="w-4 h-[2px] -rotate-45 absolute bg-white"></div>
                 </button>
                 {navbarTags.map((tags, index) => (
-                  <li
+                  <Link
                     key={index}
+                    to={`${tags.link}`}
+                    smooth={true}
+                    duration={500}
+                    activeClass="font-semibold"
+                    spy={true}
+                    offset={-70}
                     className="flex justify-center w-full py-4 hover:bg-[#7AB3E84A]"
                   >
-                    <Link
-                      to={`${tags.link}`}
-                      smooth={true}
-                      duration={500}
-                      activeClass="font-semibold"
-                      spy={true}
-                      offset={-70}
-                    >
-                      {tags.name}
-                    </Link>
-                  </li>
+                    <li>{tags.name}</li>
+                  </Link>
                 ))}
               </ul>
             </button>

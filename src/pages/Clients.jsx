@@ -4,6 +4,9 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+
+import Autoplay from "embla-carousel-autoplay";
+
 import React from "react";
 import img1 from "../assets/images/clients/pic1.png";
 import img2 from "../assets/images/clients/pic2.png";
@@ -17,7 +20,13 @@ const Clients = () => {
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 py-12">
           <div className="col-span-1 md:col-span-2 xl:col-span-3">
-            <Carousel>
+            <Carousel
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
+            >
               <CarouselContent>
                 {clients.map((client, index) => (
                   <CarouselItem
