@@ -100,9 +100,9 @@ const Products = () => {
             </h3>
 
             <p className="text-sm lg:text-base xl:text-lg">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
+              Our core focus lies in delivering tailored solutions that blend
+              cutting-edge technology, eco-conscious practices, and a commitment
+              to skill development.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">

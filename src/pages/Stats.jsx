@@ -5,25 +5,22 @@ import img from "../assets/images/stats.jpg";
 const Stats = () => {
   const cardDetails = [
     {
-      heading: "500+",
-      description:
-        "Over 34 years of excellent service and thousands of Happy customers",
+      heading: "3+",
+      description: "Years of operation",
     },
     {
-      heading: "35%",
-      description:
-        "Over 34 years of excellent service and thousands of Happy customers",
+      heading: "15+",
+      description: "Global brands",
     },
     {
-      heading: "40",
-      description:
-        "Over 34 years of excellent service and thousands of Happy customers",
+      heading: "7+",
+      description: "Industries catered to",
     },
-    {
-      heading: "20+",
-      description:
-        "Over 34 years of excellent service and thousands of Happy customers",
-    },
+    // {
+    //   heading: "20+",
+    //   description:
+    //     "Over 34 years of excellent service and thousands of Happy customers",
+    // },
   ];
 
   return (
@@ -60,10 +57,10 @@ const Stats = () => {
                   heading={cardDetails[2]?.heading}
                   description={cardDetails[2]?.description}
                 />
-                <StatCard
+                {/* <StatCard
                   heading={cardDetails[3]?.heading}
                   description={cardDetails[3]?.description}
-                />
+                /> */}
               </div>
             </div>
           </div>

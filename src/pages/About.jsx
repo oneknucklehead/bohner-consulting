@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import React from "react";
-import img from "../assets/images/about.jpg";
+import img from "../assets/images/about.webp";
 
 const About = () => {
   return (
@@ -30,13 +30,16 @@ const About = () => {
               Why us?
             </h2>
             <h3 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-900 mb-2 xl:mb-4">
-              We make products with infinite possibilities
+              Innovation with no limits—our products redefine potential
             </h3>
             <p className="text-sm lg:text-base xl:text-lg leading-relaxed">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              We provide high-quality, sustainable products supported by strong
+              processes and reliable, tested methods. Our products are designed
+              for use in multiple areas, allowing our customers to save money.
+              Continuous development reduces defects, resulting in less rework
+              and foster business sustainability. We offer quick service with a
+              24-hour turnaround time, emphasising clear communication, seamless
+              coordination
             </p>
           </div>
         </div>

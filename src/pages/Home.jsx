@@ -19,7 +19,7 @@ const Home = () => {
 
   const provide = [
     {
-      tag: "Printers",
+      tag: "Surveillance Solutions",
       logo: (
         <svg
           width="20"
@@ -36,7 +36,7 @@ const Home = () => {
       ),
     },
     {
-      tag: "Telephones",
+      tag: "Smart Classroom Solutions",
       logo: (
         <svg
           width="20"
@@ -67,7 +67,7 @@ const Home = () => {
       ),
     },
     {
-      tag: "Projectors",
+      tag: "Project Consultancy",
       logo: (
         <svg
           width="20"
@@ -98,7 +98,7 @@ const Home = () => {
       ),
     },
     {
-      tag: "LED Displays",
+      tag: "Solar projects implementation",
       logo: (
         <svg
           width="20"
@@ -134,7 +134,7 @@ const Home = () => {
     <div className="bg-[#0F75BC]">
       <div className="px-8 sm:px-12 max-w-[1000px] xl:max-w-[1200px] mx-auto">
         <div
-          className={`flex justify-center gap-8 items-center min-h-screen w-full flex-col  py-[86px]`}
+          className={`flex justify-center gap-8 items-center h-fit min-h-screen w-full flex-col  py-[86px]`}
         >
           <h1 className="text-white text-3xl sm:text-4xl  md:text-6xl text-center">
             Revolutionize your workspace
@@ -148,10 +148,13 @@ const Home = () => {
                 Transform brands by digital products
               </h3>
               <p className="text-sm sm:text-base lg:text-lg">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book
+                We are a forward-thinking organization offering diverse products
+                and services to empower businesses and communities. Our focus is
+                on aligning with the Government of India's flagship projects to
+                enhance the eastern region of the country. We strive to deliver
+                innovative, cost-effective, and sustainable solutions while
+                addressing the region's unique challenges cutting-edge
+                technologies.
               </p>
               <Link
                 to="product"

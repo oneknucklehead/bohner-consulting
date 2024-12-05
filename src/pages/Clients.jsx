@@ -12,9 +12,12 @@ import img1 from "../assets/images/clients/pic1.png";
 import img2 from "../assets/images/clients/pic2.png";
 import img3 from "../assets/images/clients/pic3.png";
 import img4 from "../assets/images/clients/pic4.png";
+import img5 from "../assets/images/clients/pic5.png";
+import img6 from "../assets/images/clients/pic6.png";
+import img7 from "../assets/images/clients/pic7.png";
 
 const Clients = () => {
-  const clients = [img1, img2, img3, img4];
+  const clients = [img1, img2, img3, img4, img5, img6, img7];
   return (
     <div className="bg-[#0F75BC] px-8 md:px-12">
       <Container>
