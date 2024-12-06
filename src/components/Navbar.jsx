@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import imgSrc from "../assets/images/logo.png";
 import Container from "./Container";
 import { Link } from "react-scroll";
-
+import imgSrc from "../assets/images/logo.png";
 import "../assets/styles/Navbar.css";
 
 const Navbar = () => {
@@ -27,8 +27,12 @@ const Navbar = () => {
           <div>
             <a href="#" className="text-2xl font-bold text-gray-800">
               <Link to="home" smooth={true} duration={500}>
-                <span className="w-[120px]">
-                  {/* <img className="w-[120px]" src={imgSrc} alt="Transcon logo" /> */}
+                <span className="w-[30px] md:w-[45px]">
+                  <img
+                    className="w-[30px] md:w-[45px] ml-2"
+                    src={imgSrc}
+                    alt="Transcon logo"
+                  />
                 </span>
               </Link>
             </a>
@@ -64,7 +68,7 @@ const Navbar = () => {
               </Link>
             </button>
           </div>
-          <div className="flex items-center justify-center md:hidden">
+          <div className="flex items-center justify-center mr-2 md:hidden">
             <button className="space-y-[3px] group">
               <div className="w-4 h-[2px] bg-[#0F75BC]"></div>
               <div className="w-4 h-[2px] bg-[#0F75BC]"></div>
