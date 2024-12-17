@@ -121,7 +121,7 @@ const Contact = () => {
           <div>
             <p className="py-2 pl-4 text-sm md:text-base">Phone number</p>
             {/* <input className="bg-[#7AB3E84A] focus:outline-[#095DAB] p-3 px-4 rounded-full" /> */}
-            <div className="flex text-black">
+            <div className="flex w-full text-black">
               <div className="country-code text-sm md:text-base font-semibold pr-4 text-[#095DAB] bg-[#75CDFFA1] p-2 flex items-center rounded-s-full">
                 +91
                 {/* <input
@@ -133,8 +133,8 @@ const Contact = () => {
                   onChange={(e) => setCode(e.target.value)}
                 /> */}
               </div>
-              <div>
-                <div className="number bg-[#7AB3E84A] rounded-e-full pt-3 pb-3 pr-3 pl-2">
+              <div className="w-full">
+                <div className="number w-full bg-[#7AB3E84A] rounded-e-full pt-3 pb-3 pr-3 pl-2">
                   <input
                     type="tel"
                     onChange={(e) => setPhone(e.target.value)}

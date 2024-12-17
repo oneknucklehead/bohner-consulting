@@ -9,11 +9,30 @@ const Ribbon = () => {
   return (
     <div className="ribbon-container max-w-7xl mx-auto">
       <Container>
-        <div className="flex justify-center sm:justify-between flex-wrap gap-4 items-center h-fit py-12">
-          <img src={img1} className="h-5 m-4 object-contain" alt={`image 1`} />
-          <img src={img2} className="h-10 m-4 object-contain" alt={`image 1`} />
-          <img src={img3} className="h-10 m-4 object-contain" alt={`image 1`} />
-          <img src={img4} className="h-10 m-4 object-contain" alt={`image 1`} />
+        <h3 className="text-center text-2xl sm:text-4xl font-semibold text-gray-900 mt-8">
+          Our partners
+        </h3>
+        <div className="flex justify-center sm:justify-between flex-wrap gap-4 items-center h-fit py-6 sm:py-12">
+          <img
+            src={img1}
+            className="h-3 sm:h-5 m-4 object-contain"
+            alt={`image 1`}
+          />
+          <img
+            src={img2}
+            className="h-7 sm:h-10 m-4 object-contain"
+            alt={`image 1`}
+          />
+          <img
+            src={img3}
+            className="h-7 sm:h-10 m-4 object-contain"
+            alt={`image 1`}
+          />
+          <img
+            src={img4}
+            className="h-7 sm:h-10 m-4 object-contain"
+            alt={`image 1`}
+          />
         </div>
       </Container>
     </div>

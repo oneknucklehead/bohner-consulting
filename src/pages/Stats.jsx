@@ -41,8 +41,8 @@ const Stats = () => {
                 className="aspect-square object-cover rounded-lg max-h-[300px] md:max-h-[500px]"
               />
             </div>
-            <div className="grid grid-cols-2 gap-4 h-full w-full">
-              <div className="flex flex-col gap-4 justify-evenly">
+            <div className="grid grid-cols-2 gap-8 h-full w-full">
+              <div className=" order-last md:order-first flex flex-col gap-4 justify-evenly">
                 <StatCard
                   heading={cardDetails[0]?.heading}
                   description={cardDetails[0]?.description}
@@ -51,16 +51,56 @@ const Stats = () => {
                   heading={cardDetails[1]?.heading}
                   description={cardDetails[1]?.description}
                 />
-              </div>
-              <div className="flex flex-col gap-4 justify-evenly">
                 <StatCard
                   heading={cardDetails[2]?.heading}
                   description={cardDetails[2]?.description}
                 />
+              </div>
+              <div className="flex flex-col gap-4 justify-evenly">
                 {/* <StatCard
                   heading={cardDetails[3]?.heading}
                   description={cardDetails[3]?.description}
                 /> */}
+                <div className="">
+                  <div className="text-white text-sm lg:text-base flex flex-col justify-center h-full gap-3">
+                    {/* <p className="font-light">Our clients</p> */}
+                    <h3 className="font-semibold text-lg md:text-2xl lg:text-3xl">
+                      Industries we cater towards
+                    </h3>
+                    <ul className="flex flex-col">
+                      <li className="hover:bg-white/50 p-1 sm:p-3">
+                        <p className=" text-sm lg:text-lg flex gap-1">
+                          <span>1.</span>
+                          <span>Government Infrastructure</span>
+                        </p>
+                      </li>
+                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                        <p className="text-sm lg:text-lg flex gap-1">
+                          <span>2.</span>
+                          <span>Education Sector</span>
+                        </p>
+                      </li>
+                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                        <p className="text-sm lg:text-lg  flex gap-1">
+                          <span>3.</span>
+                          <span>Corporates</span>
+                        </p>
+                      </li>
+                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                        <p className="text-sm lg:text-lg   flex gap-1">
+                          <span>4.</span>
+                          <span>Manufacturing Sector</span>
+                        </p>
+                      </li>
+                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                        <p className="text-sm lg:text-lg  flex gap-1">
+                          <span>5.</span>
+                          <span>Training Institutes</span>
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -72,7 +112,7 @@ const Stats = () => {
 
 const StatCard = ({ heading, description }) => {
   return (
-    <div className="bg-white p-6 xl:p-8 flex flex-col justify-center items-center rounded-lg">
+    <div className="bg-white p-4 sm:p-6 xl:p-8 flex flex-col justify-center items-center rounded-lg">
       <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-semibold">
         {heading}
       </h1>

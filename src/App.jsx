@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className="overflow-hidden relative font-montserrat">
+      <div className="relative font-montserrat">
         <Navbar />
         <section id="home" className="">
           <Home />
@@ -26,11 +26,11 @@ function App() {
         <section id="product" className="">
           <Products />
         </section>
-        <section id="trust" className="">
-          <Stats />
-        </section>
         <section id="client" className="">
           <Clients />
+        </section>
+        <section id="trust" className="">
+          <Stats />
         </section>
         <section id="contact" className="">
           <Contact />

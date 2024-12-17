@@ -10,8 +10,8 @@ const Navbar = () => {
   const navbarTags = [
     { name: "About Us", link: "about" },
     { name: "Product", link: "product" },
-    { name: "Trust", link: "trust" },
     { name: "Clients", link: "client" },
+    { name: "Trust", link: "trust" },
     { name: "Contact", link: "contact" },
   ];
 
@@ -64,7 +64,7 @@ const Navbar = () => {
                 duration={500}
                 offset={-100}
               >
-                Book Now!
+                Reach us
               </Link>
             </button>
           </div>

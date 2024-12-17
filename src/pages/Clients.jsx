@@ -21,8 +21,10 @@ const Clients = () => {
   return (
     <div className="bg-[#0F75BC] px-8 md:px-12">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 py-12">
-          <div className="col-span-1 md:col-span-2 xl:col-span-3">
+        <h1 className="text-center text-white text-4xl pt-10">Our Clientele</h1>
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-12">
+          {/* <div className="col-span-1 md:col-span-2 xl:col-span-3"> */}
+          <div className="col-span-1 sm:col-span-2 md:col-span-4">
             <Carousel
               plugins={[
                 Autoplay({
@@ -34,7 +36,7 @@ const Clients = () => {
                 {clients.map((client, index) => (
                   <CarouselItem
                     key={index}
-                    className=" md:basis-1/2 xl:basis-1/3 rounded-lg"
+                    className="basis-1/2 md:basis-1/3 xl:basis-1/4 rounded-lg"
                   >
                     <ClientCard imgSrc={client} />
                   </CarouselItem>
@@ -42,7 +44,7 @@ const Clients = () => {
               </CarouselContent>
             </Carousel>
           </div>
-          <div className="col-span-1">
+          {/* <div className="col-span-1">
             <div className="text-white text-sm lg:text-base flex flex-col justify-center h-full gap-3">
               <p className="font-light">Our clients</p>
               <h3 className="font-semibold text-2xl lg:text-3xl">
@@ -53,7 +55,7 @@ const Clients = () => {
                 your lorem ipsum
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>
