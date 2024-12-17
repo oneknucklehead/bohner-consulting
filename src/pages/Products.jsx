@@ -138,7 +138,7 @@ const Products = () => {
                     <span className="text-xs md:text-base top-4 right-4 rounded-full capitalize text-white absolute py-2 px-4 bg-[#0F75BC]">
                       {list.tag}
                     </span>
-                    <div className="p-4 w-full flex justify-between gap-4 items-center">
+                    <div className="p-4 w-full  items-center">
                       <div>
                         <h3 className="text-2xl xl:text-3xl font-semibold capitalize">
                           {list.name}
@@ -147,11 +147,11 @@ const Products = () => {
                           {list.description}
                         </p>
                       </div>
-                      <div>
+                      {/* <div>
                         <h1 className="text-xl xl:text-3xl font-bold">
                           {list.price}
                         </h1>
-                      </div>
+                      </div> */}
                     </div>
                   </CarouselItem>
                 ))}

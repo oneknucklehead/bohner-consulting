@@ -21,7 +21,10 @@ const Clients = () => {
   return (
     <div className="bg-[#0F75BC] px-8 md:px-12">
       <Container>
-        <h1 className="text-center text-white text-4xl pt-10">Our Clientele</h1>
+        <div className="pt-10">
+          {/* <p className="text-white font-light text-center pb-2">Works</p> */}
+          <h1 className="text-center text-white text-4xl">Our Clientele</h1>
+        </div>
         <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-12">
           {/* <div className="col-span-1 md:col-span-2 xl:col-span-3"> */}
           <div className="col-span-1 sm:col-span-2 md:col-span-4">

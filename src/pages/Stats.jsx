@@ -68,31 +68,31 @@ const Stats = () => {
                       Industries we cater towards
                     </h3>
                     <ul className="flex flex-col">
-                      <li className="hover:bg-white/50 p-1 sm:p-3">
+                      <li className="cursor-pointer hover:bg-white/50 p-1 sm:p-3">
                         <p className=" text-sm lg:text-lg flex gap-1">
                           <span>1.</span>
                           <span>Government Infrastructure</span>
                         </p>
                       </li>
-                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                      <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg flex gap-1">
                           <span>2.</span>
                           <span>Education Sector</span>
                         </p>
                       </li>
-                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                      <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg  flex gap-1">
                           <span>3.</span>
                           <span>Corporates</span>
                         </p>
                       </li>
-                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                      <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg   flex gap-1">
                           <span>4.</span>
                           <span>Manufacturing Sector</span>
                         </p>
                       </li>
-                      <li className="hover:bg-white/50  p-1 sm:p-3">
+                      <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg  flex gap-1">
                           <span>5.</span>
                           <span>Training Institutes</span>

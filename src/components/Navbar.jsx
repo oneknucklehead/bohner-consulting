@@ -9,7 +9,7 @@ const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
   const navbarTags = [
     { name: "About Us", link: "about" },
-    { name: "Product", link: "product" },
+    { name: "Services", link: "product" },
     { name: "Clients", link: "client" },
     { name: "Trust", link: "trust" },
     { name: "Contact", link: "contact" },
