@@ -1,42 +1,18 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Ribbon from "./components/Ribbon";
-import About from "./pages/About";
-import Products from "./pages/Products";
-import Stats from "./pages/Stats";
-import Clients from "./pages/Clients";
-import Contact from "./pages/Contact";
-import FooterSection from "./components/Footer";
+
+import { BrowserRouter, Route, Routes } from "react-router";
+import Services from "./pages/Services";
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div className="relative font-montserrat">
-        <Navbar />
-        <section id="home" className="">
-          <Home />
-        </section>
-        <Ribbon />
-        <section id="about" className="">
-          <About />
-        </section>
-        <section id="product" className="">
-          <Products />
-        </section>
-        <section id="client" className="">
-          <Clients />
-        </section>
-        <section id="trust" className="">
-          <Stats />
-        </section>
-        <section id="contact" className="">
-          <Contact />
-        </section>
-        <FooterSection />
-      </div>
+      <BrowserRouter basename="/bohner-consulting">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<Services />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
