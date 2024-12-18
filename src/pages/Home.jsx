@@ -3,8 +3,8 @@ import Container from "../components/Container";
 import img1 from "../assets/images/img1.jpg";
 import img2 from "../assets/images/img2.jpg";
 import img3 from "../assets/images/img3.jpg";
-
 import Autoplay from "embla-carousel-autoplay";
+import { Link as LinkRouter } from "react-router";
 
 import {
   Carousel,
@@ -200,15 +200,15 @@ const Home = () => {
                 addressing the region's unique challenges cutting-edge
                 technologies.
               </p>
-              {/* <Link
-                to="product"
+              <LinkRouter
+                to="/services"
                 className="cursor-pointer py-2 text-center rounded-lg bg-white text-[#0F75BC]"
-                smooth={true}
-                duration={500}
-                offset={-100}
+                // smooth={true}
+                // duration={500}
+                // offset={-100}
               >
-                Show products
-              </Link> */}
+                Show services
+              </LinkRouter>
             </div>
             <div className="col-span-12 sm:col-span-6 xl:col-span-7">
               <div className=" grid xl:grid-cols-2 gap-4 ">
