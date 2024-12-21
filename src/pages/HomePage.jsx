@@ -1,12 +1,12 @@
-import Navbar from "@/components/Navbar";
 import React from "react";
-import Home from "./Home";
+import Navbar from "@/components/Navbar";
+import Home from "@/sections/Home";
 import Ribbon from "@/components/Ribbon";
-import About from "./About";
-import Products from "./Products";
-import Clients from "./Clients";
-import Stats from "./Stats";
-import Contact from "./Contact";
+import About from "@/sections/About";
+import Products from "@/sections/Products";
+import Clients from "@/sections/Clients";
+import Stats from "@/sections/Stats";
+import Contact from "@/sections/Contact";
 import FooterSection from "@/components/Footer";
 
 const HomePage = () => {

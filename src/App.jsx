@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router";
-import Services from "./pages/Services";
+import ServicesPage from "./pages/ServicesPage";
 import HomePage from "./pages/HomePage";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter basename="/bohner-consulting">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services" element={<ServicesPage />} />
         </Routes>
       </BrowserRouter>
     </>
