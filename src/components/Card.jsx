@@ -64,7 +64,9 @@ const Card = ({ img, title, description, to }) => {
         </p>
         <Link
           to={to}
-          className="inline-flex items-center justify-between px-3 py-2 w-full text-sm text-center text-white bg-blue-700 rounded-lg"
+          smooth={true}
+          duration={500}
+          className="inline-flex items-center justify-between px-3 py-2 w-full text-sm text-center text-white bg-[#095DAB] rounded-lg"
         >
           Scroll to
           <svg

@@ -74,6 +74,13 @@ const list = [
 
 export const serviceData = [
     {
+        images: [mainImg5, img52, img53, img54, img55, img56, img57, img58, img59, img510, img511, img512, img513, img514, img515, img516, img517, img518, img519, img520, img521, img522, img523],
+        title: "Surveillance Solutions",
+        description:
+            "Your safety is our priority. We provide state-of-the-art surveillance systems designed to protect what matters most—be it homes, offices, or large-scale enterprises.",
+        to: "surveillance",
+    },
+    {
         images: [mainImg1, img12, img13, img14],
         title: "Jute Products Exports",
         description: "",
@@ -100,12 +107,6 @@ export const serviceData = [
             "Committed to a sustainable future, we specialise in solar energy projects, offering end-to-end solutions from design to execution to help harness the power of renewable energy.",
         to: "solar",
     },
-    {
-        images: [mainImg5, img52, img53, img54, img55, img56, img57, img58, img59, img510, img511, img512, img513, img514, img515, img516, img517, img518, img519, img520, img521, img522, img523],
-        title: "Surveillance Solutions",
-        description:
-            "Your safety is our priority. We provide state-of-the-art surveillance systems designed to protect what matters most—be it homes, offices, or large-scale enterprises.",
-        to: "surveillance",
-    },
+
 ];
 export default list;
