@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import React from "react";
 import img from "../assets/images/stats.jpg";
+import founder from "../assets/images/founder.jpg";
 
 const Stats = () => {
   const cardDetails = [
@@ -77,29 +78,85 @@ const Stats = () => {
                       <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg flex gap-1">
                           <span>2.</span>
-                          <span>Education Sector</span>
+                          <span>Healthcare</span>
                         </p>
                       </li>
+
                       <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg  flex gap-1">
                           <span>3.</span>
-                          <span>Corporates</span>
+                          <span>Enterprises</span>
                         </p>
                       </li>
                       <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg   flex gap-1">
                           <span>4.</span>
-                          <span>Manufacturing Sector</span>
+                          <span>Education Sector</span>
                         </p>
                       </li>
                       <li className="cursor-pointer hover:bg-white/50  p-1 sm:p-3">
                         <p className="text-sm lg:text-lg  flex gap-1">
                           <span>5.</span>
-                          <span>Training Institutes</span>
+                          <span>Home security solutions</span>
                         </p>
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center py-12">
+            <div className="bg-white flex flex-col sm:flex-row max-w-[700px] gap-12 rounded-lg p-8">
+              <div className="flex justify-center items-center">
+                <div className="rounded-full w-40 h-40">
+                  <img
+                    src={founder}
+                    className=" object-cover w-full h-full rounded-full "
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-2 justify-center">
+                <p className="text-center sm:text-left text-xs lg:text-sm text-gray-400">
+                  Founder
+                </p>
+                <h3 className="text-center sm:text-left text-lg lg:text-xl">
+                  Jane Doe
+                </h3>
+                <p className="text-center sm:text-left text-sm lg:text-base">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s
+                </p>
+                <div className="py-4 flex justify-center sm:justify-start gap-4 items-center">
+                  <span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 72 72"
+                      fill="#0F75BC"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 0V72H72V0H0ZM60 8C62.208 8 64 9.792 64 12C64 14.208 62.208 16 60 16C57.792 16 56 14.208 56 12C56 9.792 57.792 8 60 8ZM36 16C47.044 16 56 24.956 56 36C56 47.044 47.044 56 36 56C24.956 56 16 47.044 16 36C16 24.956 24.956 16 36 16ZM36 24C32.8174 24 29.7652 25.2643 27.5147 27.5147C25.2643 29.7652 24 32.8174 24 36C24 39.1826 25.2643 42.2348 27.5147 44.4853C29.7652 46.7357 32.8174 48 36 48C39.1826 48 42.2348 46.7357 44.4853 44.4853C46.7357 42.2348 48 39.1826 48 36C48 32.8174 46.7357 29.7652 44.4853 27.5147C42.2348 25.2643 39.1826 24 36 24Z"
+                        fill="#0F75BC"
+                      />
+                    </svg>
+                  </span>
+                  <span className="">
+                    <svg
+                      width="10"
+                      height="20"
+                      viewBox="0 0 43 80"
+                      fill="#0F75BC"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M42.1 28H28V20C28 15.872 28.336 13.272 34.252 13.272H41.724V0.552006C38.088 0.176006 34.432 -0.00799414 30.772 5.85933e-06C19.92 5.85933e-06 12 6.62801 12 18.796V28H0V44L12 43.996V80H28V43.988L40.264 43.984L42.1 28Z"
+                        fill="#0F75BC"
+                      />
+                    </svg>
+                  </span>
                 </div>
               </div>
             </div>

@@ -14,8 +14,10 @@ import img5 from "../assets/images/products/product5.jpg";
 
 import React, { useState } from "react";
 import Container from "@/components/Container";
+import Modal from "@/components/Modal";
 
 const Products = () => {
+  const [open, setOpen] = useState(false);
   const tags = ["electronics", "phones"];
   const items = [
     {
@@ -128,7 +130,8 @@ const Products = () => {
                 {filteredList?.map((list, index) => (
                   <CarouselItem
                     key={index}
-                    className="relative sm:basis-1/2 md:basis-1/3 flex flex-col justify-center items-center"
+                    onClick={() => setOpen(true)}
+                    className="relative cursor-pointer sm:basis-1/2 md:basis-1/3 flex flex-col justify-center items-center"
                   >
                     <img
                       src={list.img}
@@ -158,6 +161,20 @@ const Products = () => {
               </CarouselContent>
             </Carousel>
           </div>
+
+          <Modal isOpen={open} onClose={() => setOpen(false)}>
+            <h2 className="text-xl font-bold mb-2">Welcome</h2>
+            <p className="mb-4 text-gray-600 dark:text-gray-300">
+              This modal is built using React and Tailwind with smooth
+              transitions.
+            </p>
+            <button
+              onClick={() => setOpen(false)}
+              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+            >
+              Close
+            </button>
+          </Modal>
         </div>
       </Container>
     </div>

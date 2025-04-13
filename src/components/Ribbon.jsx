@@ -28,11 +28,11 @@ const Ribbon = () => {
             className="h-7 sm:h-10 m-4 object-contain"
             alt={`image 1`}
           />
-          <img
+          {/* <img
             src={img4}
             className="h-7 sm:h-10 m-4 object-contain"
             alt={`image 1`}
-          />
+          /> */}
         </div>
       </Container>
     </div>
