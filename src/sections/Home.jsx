@@ -187,16 +187,18 @@ const Home = () => {
                 With bohner consulting
               </p>
               <h3 className="text-xl sm:text-3xl font-semibold">
-                Transform brands by digital products
+                Smart Technology for a Smarter Tomorrow
               </h3>
               <p className="text-sm sm:text-base lg:text-lg">
-                We are a forward-thinking organization offering diverse products
-                and services to empower businesses and communities. Our focus is
-                on aligning with the Government of India's flagship projects to
-                enhance the eastern region of the country. We strive to deliver
-                innovative, cost-effective, and sustainable solutions while
-                addressing the region's unique challenges cutting-edge
-                technologies.
+                We are a recognized Government of India Start-up (DIPP189127)
+                and MSME offering future-ready technology solutions tailored for
+                Education, Healthcare, Enterprise, and Government sectors.
+                <br />
+                <br />
+                Whether you're building Smart Classrooms, deploying Surveillance
+                Systems, or enhancing Communication Infrastructure — we provide
+                end-to-end, branded, and scalable solutions designed to help you
+                stay ahead in a digitally driven world.
               </p>
               <Link
                 to="product"
@@ -212,7 +214,7 @@ const Home = () => {
             </div>
             <div className="col-span-12 sm:col-span-6 xl:col-span-7">
               <div className=" grid xl:grid-cols-2 gap-4 ">
-                <div className="bg-white/50 overflow-y-auto max-h-[200px] sm:max-h-full flex flex-col gap-2 justify-between rounded-lg p-5">
+                <div className="bg-white/50 overflow-y-auto h-full max-h-[155px] sm:max-h-full flex flex-col gap-2 justify-between rounded-lg p-5">
                   {/* <div className=""> */}
                   <p className="text-lg md:text-2xl">We Provide</p>
                   {provide.map((unit, index) => (

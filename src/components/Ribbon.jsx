@@ -12,6 +12,10 @@ const Ribbon = () => {
         <h3 className="text-center text-2xl sm:text-4xl font-semibold text-gray-900 mt-8">
           Our partners
         </h3>
+        <p className="text-center text-sm sm:text-base text-gray-900 mt-2">
+          We are proud to be authorized partners and distributors for:
+          Panasonic, ViewSonic, Grandstream, AVer, A&T, and Godrej Interio.
+        </p>
         <div className="flex justify-center sm:justify-between flex-wrap gap-4 items-center h-fit py-6 sm:py-12">
           <img
             src={img1}
