@@ -9,12 +9,17 @@ const FooterSection = () => {
           <div>
             <h3 className="text-3xl font-bold">Our Head Office</h3>
             <div className="py-3">
-              <p>Bohner Consulting Pvt. Ltd.</p>
-              <p>Headquartered in Eastern India | Serving Clients Nationwide</p>
+              {/* <p>Bohner Consulting Pvt. Ltd.</p> */}
+              {/* <p>Headquartered in Eastern India | Serving Clients Nationwide</p> */}
+              <p>Registered Start-Up | MSME Recognized</p>
+              <p className="font-semibold">
+                Bohner Consulting Pvt Ltd ,<br /> Workzone , 4th Floor , 44 Park
+                Street <br /> Kolkata - 700016
+              </p>
               {/* <p>21 Hemanta Basu Sarani</p>
               <p>Near Lalit Great Eastern Hotel</p>
               <p>Kolkata - 700001 (West Bengal)</p> */}
-              <div className="flex gap-4 mt-5 flex-wrap">
+              {/* <div className="flex gap-4 mt-5 flex-wrap">
                 <span>
                   <svg
                     width="30"
@@ -57,14 +62,14 @@ const FooterSection = () => {
                     />
                   </svg>
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
           <div>
             <h3 className="text-3xl font-bold">Talk to us</h3>
             <div className="py-3 flex flex-col gap-2">
-              <p>Phone: +91 98300 49750</p>
-              <p>Email: nanda@bohnerconsulting.co.in</p>
+              <p>Phone: +91 98300 49750 / 74396 68211</p>
+              <p>Email: info@bohnerconsulting.co.in</p>
               {/* <div>
                 <p>For service related email–</p>
                 <p>service@transconelectronics.com</p>

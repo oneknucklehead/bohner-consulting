@@ -7,26 +7,43 @@ import {
 
 import Autoplay from "embla-carousel-autoplay";
 
-import React from "react";
-import img1 from "../assets/images/clients/pic1.png";
-import img2 from "../assets/images/clients/pic2.png";
-import img3 from "../assets/images/clients/pic3.png";
-import img4 from "../assets/images/clients/pic4.png";
-import img5 from "../assets/images/clients/pic5.png";
-import img6 from "../assets/images/clients/pic6.png";
-import img7 from "../assets/images/clients/pic7.png";
+import React, { useState } from "react";
+import img1 from "../assets/images/clients/1.webp";
+import img2 from "../assets/images/clients/2.webp";
+import img3 from "../assets/images/clients/3.webp";
+import img4 from "../assets/images/clients/4.webp";
+import img5 from "../assets/images/clients/5.webp";
+import img6 from "../assets/images/clients/pic1.webp";
+import img7 from "../assets/images/clients/pic2.webp";
+import img8 from "../assets/images/clients/pic3.webp";
+import img9 from "../assets/images/clients/pic4.webp";
+import img10 from "../assets/images/clients/pic5.webp";
+import img11 from "../assets/images/clients/pic6.webp";
+import img12 from "../assets/images/clients/pic7.webp";
 
 const Clients = () => {
-  const clients = [img1, img2, img3, img4, img5, img6, img7];
+  const clients = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+  ];
+
   return (
     <div className="bg-[#0F75BC] px-8 md:px-12">
       <Container>
         <div className="pt-10">
-          {/* <p className="text-white font-light text-center pb-2">Works</p> */}
           <h1 className="text-center text-white text-4xl">Our Clientele</h1>
         </div>
         <div className="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 py-12">
-          {/* <div className="col-span-1 md:col-span-2 xl:col-span-3"> */}
           <div className="col-span-1 sm:col-span-2 md:col-span-4">
             <Carousel
               plugins={[
@@ -41,24 +58,12 @@ const Clients = () => {
                     key={index}
                     className="basis-1/2 md:basis-1/3 xl:basis-1/4 rounded-lg"
                   >
-                    <ClientCard imgSrc={client} />
+                    <ClientCard imgSrc={client} index={index} />
                   </CarouselItem>
                 ))}
               </CarouselContent>
             </Carousel>
           </div>
-          {/* <div className="col-span-1">
-            <div className="text-white text-sm lg:text-base flex flex-col justify-center h-full gap-3">
-              <p className="font-light">Our clients</p>
-              <h3 className="font-semibold text-2xl lg:text-3xl">
-                Our innovative solutions are designed to
-              </h3>
-              <p className="text-sm lg:text-lg">
-                We provide to enhance your lorem ipsum We provide to enhance
-                your lorem ipsum
-              </p>
-            </div>
-          </div> */}
         </div>
       </Container>
     </div>
@@ -67,8 +72,34 @@ const Clients = () => {
 
 const ClientCard = ({ imgSrc, index }) => {
   return (
-    <div className="p-5  rounded-lg bg-white flex items-center justify-center w-full h-full">
-      <img src={imgSrc} alt={`client ${index}`} className="object-contain" />
+    <div className="p-5 rounded-lg bg-white flex items-center justify-center w-full h-full">
+      <ImageWithSkeleton src={imgSrc} alt={`client ${index}`} />
+    </div>
+  );
+};
+
+const ImageWithSkeleton = ({ src, alt }) => {
+  const [loaded, setLoaded] = useState(false);
+  const [errored, setErrored] = useState(false);
+
+  return (
+    <div className="relative w-full h-full flex justify-center items-center">
+      {!loaded && !errored && (
+        <div className="absolute inset-0 animate-pulse bg-gray-200 rounded-md" />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        onError={() => {
+          setErrored(true);
+          setLoaded(true);
+        }}
+        className={`w-auto object-contain transition-opacity duration-300 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
+      />
     </div>
   );
 };

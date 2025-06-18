@@ -6,11 +6,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import img1 from "../assets/images/products/product1.jpg";
-import img2 from "../assets/images/products/product2.png";
-import img3 from "../assets/images/products/product3.jpg";
-import img4 from "../assets/images/products/product4.jpg";
-import img5 from "../assets/images/products/product5.jpg";
+import img1 from "../assets/images/products/airconditioning.webp";
+import img2 from "../assets/images/products/healthcare.webp";
+import img3 from "../assets/images/products/institutional.webp";
+import img4 from "../assets/images/products/security.webp";
+import img5 from "../assets/images/products/smartclassroom.webp";
+import img6 from "../assets/images/products/telecom.webp";
 
 import React, { useState } from "react";
 import Container from "@/components/Container";
@@ -22,20 +23,20 @@ const Products = () => {
   const items = [
     {
       name: "Smart Classrooms",
-      img: img1,
+      img: img5,
       taglines: "Interactive, Immersive, Future-Ready Learning",
       description:
-        "We design and implement state-of-the-art Smart Classroom solutions that transform traditional education spaces into interactive, collaborative, and hybrid learning environments. Equipped with Interactive Smart Panels, PTZ Cameras, High-Fidelity Microphones, Projectors, and Video Conferencing Systems, our classrooms enable educators to engage students both in-person and virtually. Ideal for schools, colleges, universities, and online education platforms, these solutions promote flexibility, inclusion, and innovation in teaching.",
+        "We design and implement state-of-the-art Smart Classroom solutions...",
       industries: " Education (K-12, Higher Ed, Coaching Institutes)",
       brands: "Panasonic, ViewSonic, AVer, A&T, Ekin",
       tag: "best",
     },
     {
       name: "Security & Surveillance",
-      img: img2,
+      img: img4,
       taglines: "Smart, Secure, Always Vigilant",
       description:
-        "Our AI-powered surveillance solutions provide round-the-clock security monitoring, featuring advanced tools such as facial recognition, motion detection, real-time alerts, cloud recording, and remote access. Designed to serve the security needs of educational campuses, corporate offices, homes, government buildings, and public spaces, these systems help organizations safeguard people, assets, and information efficiently.",
+        "Our AI-powered surveillance solutions provide round-the-clock security...",
       industries:
         "Education, Enterprise, Government, Residential, Retail, Construction",
       brands: "Panasonic (Authorized Distributor)",
@@ -43,22 +44,21 @@ const Products = () => {
     },
     {
       name: "Telecom & Connectivity",
-      img: img3,
+      img: img6,
       taglines: "Unified, Scalable, Seamless Communication",
       description:
-        "We offer a full range of Telecom and Communication solutions including IP-PBX Systems, SIP Phones, VoIP Gateways, Conventional PBX, and PA Systems, enabling seamless internal and external communication. These systems are essential for educational institutions, corporate offices, government agencies, and residential complexes where reliability, scalability, and integration are critical.",
+        "We offer a full range of Telecom and Communication solutions...",
       industries:
         " Education, Enterprise, Government, Hospitality, Residential",
       brands: "Panasonic, Grandstream",
-
       tag: "new",
     },
     {
       name: "Healthcare AV & Streaming",
-      img: img4,
+      img: img2,
       taglines: "Precision, Clarity, Medical Reach",
       description:
-        "Our Healthcare AV solutions are tailored for hospitals, medical colleges, and telemedicine platforms, featuring high-resolution surgery cameras, live-streaming systems, and recording solutions for remote diagnostics, medical training, and real-time consultation. These technologies ensure clear communication and data sharing in critical healthcare environments and medical education.",
+        "Our Healthcare AV solutions are tailored for hospitals, medical colleges...",
       industries: "Healthcare, Medical Education, Research Institutions",
       brands: "Panasonic, AVer",
       tag: "best",
@@ -66,9 +66,9 @@ const Products = () => {
     {
       name: "Institutional Furniture",
       taglines: "Ergonomic, Functional, Space-Smart Solutions",
-      img: img5,
+      img: img3,
       description:
-        "As authorized partners of Godrej Interio, we supply ergonomically designed furniture solutions for educational institutions and corporate offices. Our range includes classroom desks, library seating, office workstations, and collaborative furniture that support modern pedagogy and productivity in workspaces.",
+        "As authorized partners of Godrej Interio, we supply ergonomically designed furniture...",
       industries: "Education, Enterprise, Government",
       brands: "Godrej Interio (Authorized Project Partner)",
       tag: "featured",
@@ -76,9 +76,9 @@ const Products = () => {
     {
       name: "Air Conditioning Projects",
       taglines: "Efficient, Scalable Climate Control",
-      img: img5,
+      img: img1,
       description:
-        "We are institutional distributors for Panasonic Air Conditioning Systems, offering energy-efficient HVAC solutions for large-scale facilities such as educational campuses, hospitals, government offices, and commercial buildings. These systems ensure optimal indoor climate with high performance, low power consumption, and long-term reliability.",
+        "We are institutional distributors for Panasonic Air Conditioning Systems...",
       industries: " Education, Healthcare, Government, Commercial",
       brands: "Panasonic (Institutional Distributor)",
       tag: "featured",
@@ -102,13 +102,9 @@ const Products = () => {
                   <CarouselItem
                     key={index}
                     onClick={() => setSelectedProduct(item)}
-                    className="relative cursor-pointer sm:basis-1/2 md:basis-1/3 flex flex-col justify-center items-center"
+                    className="relative cursor-pointer sm:basis-1/2 md:basis-1/3 flex h-full flex-col justify-center items-center"
                   >
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="w-full h-full object-cover"
-                    />
+                    <ImageWithSkeleton src={item.img} alt={item.name} />
                     <span className="text-xs md:text-base top-4 right-4 rounded-full capitalize text-white absolute py-2 px-4 bg-[#0F75BC]">
                       {item.tag}
                     </span>
@@ -150,7 +146,7 @@ const Products = () => {
                   </svg>
                 </button>
               </div>
-              <img
+              <ImageWithSkeleton
                 src={selectedProduct.img}
                 alt={selectedProduct.name}
                 className="w-full h-56 object-cover rounded-lg mb-4"
@@ -176,3 +172,30 @@ const Products = () => {
 };
 
 export default Products;
+
+// Helper Component
+const ImageWithSkeleton = ({ src, alt, className = "" }) => {
+  const [loaded, setLoaded] = useState(false);
+  const [errored, setErrored] = useState(false);
+
+  return (
+    <div className={`w-full h-56 relative`}>
+      {!loaded && !errored && (
+        <div className="absolute inset-0 animate-pulse bg-gray-300 rounded-lg" />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        onError={() => {
+          setErrored(true);
+          setLoaded(true); // still hide skeleton
+        }}
+        className={`w-full h-56 object-cover rounded-lg transition-opacity duration-300 ${
+          loaded ? "opacity-100" : "opacity-0"
+        } ${className}`}
+      />
+    </div>
+  );
+};
