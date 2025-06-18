@@ -20,6 +20,9 @@ import img9 from "../assets/images/clients/pic4.webp";
 import img10 from "../assets/images/clients/pic5.webp";
 import img11 from "../assets/images/clients/pic6.webp";
 import img12 from "../assets/images/clients/pic7.webp";
+import img13 from "../assets/images/clients/pic8.webp";
+import img14 from "../assets/images/clients/pic9.webp";
+import img15 from "../assets/images/clients/pic10.webp";
 
 const Clients = () => {
   const clients = [
@@ -35,6 +38,9 @@ const Clients = () => {
     img10,
     img11,
     img12,
+    img13,
+    img14,
+    img15,
   ];
 
   return (
