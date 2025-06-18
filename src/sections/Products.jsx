@@ -22,7 +22,7 @@ const Products = () => {
   const items = [
     {
       type: "electronics",
-      name: "Printers",
+      name: "Smart Classroom Solutions",
       img: img1,
       description: "lorem lorem lorem lorem",
       price: "$250",
@@ -98,14 +98,14 @@ const Products = () => {
         <div className="flex flex-col gap-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4">
             <h3 className=" text-2xl lg:text-3xl xl:text-4xl font-semibold">
-              Our new exclusive collections
+              Our services
             </h3>
 
-            <p className="text-sm lg:text-base xl:text-lg">
+            {/* <p className="text-sm lg:text-base xl:text-lg">
               Our core focus lies in delivering tailored solutions that blend
               cutting-edge technology, eco-conscious practices, and a commitment
               to skill development.
-            </p>
+            </p> */}
           </div>
           <div className="flex flex-wrap gap-4">
             {tags.map((tag, index) => (
@@ -165,8 +165,15 @@ const Products = () => {
           <Modal isOpen={open} onClose={() => setOpen(false)}>
             <h2 className="text-xl font-bold mb-2">Welcome</h2>
             <p className="mb-4 text-gray-600 dark:text-gray-300">
-              This modal is built using React and Tailwind with smooth
-              transitions.
+              We empower institutions to create future-ready, immersive learning
+              environments by integrating smart technologies that enhance
+              teaching and student engagement. Our offerings include:
+              Interactive Smart Panels PTZ Cameras & High-Lumen Projectors Video
+              Conferencing Equipment Microphones and Speaker Phones for hybrid
+              learning environments These tools are designed to optimize both
+              physical and virtual classroom experiences, ensuring seamless
+              communication and interactive learning. Authorized Partners:
+              Panasonic, Ekin, AVer, A&T
             </p>
             <button
               onClick={() => setOpen(false)}

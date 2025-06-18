@@ -4,6 +4,7 @@ import Container from "./Container";
 import { Link } from "react-scroll";
 import imgSrc from "../assets/images/logo.png";
 import "../assets/styles/Navbar.css";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -53,6 +54,11 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              <li className="p-1 cursor-pointer">
+                <NavLink to={`smart-tech`} activeClass="font-bold">
+                  Smart Tech
+                </NavLink>
+              </li>
             </ul>
           </div>
           <div className="hidden md:flex">
@@ -92,6 +98,13 @@ const Navbar = () => {
                     <li>{tags.name}</li>
                   </Link>
                 ))}
+                <NavLink
+                  to={`smart-tech`}
+                  activeClass="font-semibold"
+                  className="flex justify-center w-full py-4 hover:bg-[#7AB3E84A]"
+                >
+                  <li>Smart Tech</li>
+                </NavLink>
               </ul>
             </button>
           </div>

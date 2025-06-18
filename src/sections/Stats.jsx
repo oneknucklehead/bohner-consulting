@@ -106,7 +106,7 @@ const Stats = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center py-12">
+          {/* <div className="flex justify-center py-12">
             <div className="bg-white flex flex-col sm:flex-row max-w-[700px] gap-12 rounded-lg p-8">
               <div className="flex justify-center items-center">
                 <div className="rounded-full w-40 h-40">
@@ -160,7 +160,7 @@ const Stats = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

@@ -66,7 +66,7 @@ const Home = () => {
       ),
     },
     {
-      tag: "Smart Classroom and EV integrations Solutions",
+      tag: "Smart Classroom and AV integrations Solutions",
       logo: (
         <svg
           width="20"

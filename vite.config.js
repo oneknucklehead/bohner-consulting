@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react-swc';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/bohner-consulting",
+  base: "/bohner-consulting/",
   plugins: [react()],
   resolve: {
     alias: {
