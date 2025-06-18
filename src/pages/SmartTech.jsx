@@ -43,7 +43,7 @@ const SmartTech = () => {
               Our Solution
             </h1>
             <p className="text-center text-sm sm:text-base lg:text-lg">
-              <b> Intelligent Surveillance for Safer Public Spaces</b>
+              <b> Intelligent Surveillance for Safer Public Spaces </b>
               At<b> Bonheur Consulting</b>, public safety is not just a
               priority—it is a purpose. Recognizing the increasing need for
               secure environments, especially for<b> women and children</b>, we
