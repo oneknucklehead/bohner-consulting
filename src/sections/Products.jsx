@@ -17,171 +17,158 @@ import Container from "@/components/Container";
 import Modal from "@/components/Modal";
 
 const Products = () => {
-  const [open, setOpen] = useState(false);
-  const tags = ["electronics", "phones"];
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   const items = [
     {
-      type: "electronics",
-      name: "Smart Classroom Solutions",
+      name: "Smart Classrooms",
       img: img1,
-      description: "lorem lorem lorem lorem",
-      price: "$250",
+      taglines: "Interactive, Immersive, Future-Ready Learning",
+      description:
+        "We design and implement state-of-the-art Smart Classroom solutions that transform traditional education spaces into interactive, collaborative, and hybrid learning environments. Equipped with Interactive Smart Panels, PTZ Cameras, High-Fidelity Microphones, Projectors, and Video Conferencing Systems, our classrooms enable educators to engage students both in-person and virtually. Ideal for schools, colleges, universities, and online education platforms, these solutions promote flexibility, inclusion, and innovation in teaching.",
+      industries: " Education (K-12, Higher Ed, Coaching Institutes)",
+      brands: "Panasonic, ViewSonic, AVer, A&T, Ekin",
       tag: "best",
     },
     {
-      type: "electronics",
-      name: "consoles",
+      name: "Security & Surveillance",
       img: img2,
-      description: "lorem lorem lorem lorem",
-      price: "$250",
-      tag: "best",
+      taglines: "Smart, Secure, Always Vigilant",
+      description:
+        "Our AI-powered surveillance solutions provide round-the-clock security monitoring, featuring advanced tools such as facial recognition, motion detection, real-time alerts, cloud recording, and remote access. Designed to serve the security needs of educational campuses, corporate offices, homes, government buildings, and public spaces, these systems help organizations safeguard people, assets, and information efficiently.",
+      industries:
+        "Education, Enterprise, Government, Residential, Retail, Construction",
+      brands: "Panasonic (Authorized Distributor)",
+      tag: "popular",
     },
     {
-      type: "electronics",
-      name: "headphones",
+      name: "Telecom & Connectivity",
       img: img3,
-      description: "lorem lorem lorem lorem",
-      price: "$50",
-      tag: "best",
+      taglines: "Unified, Scalable, Seamless Communication",
+      description:
+        "We offer a full range of Telecom and Communication solutions including IP-PBX Systems, SIP Phones, VoIP Gateways, Conventional PBX, and PA Systems, enabling seamless internal and external communication. These systems are essential for educational institutions, corporate offices, government agencies, and residential complexes where reliability, scalability, and integration are critical.",
+      industries:
+        " Education, Enterprise, Government, Hospitality, Residential",
+      brands: "Panasonic, Grandstream",
+
+      tag: "new",
     },
     {
-      type: "electronics",
-      name: "headphones",
+      name: "Healthcare AV & Streaming",
       img: img4,
-      description: "lorem lorem lorem lorem",
-      price: "$50",
+      taglines: "Precision, Clarity, Medical Reach",
+      description:
+        "Our Healthcare AV solutions are tailored for hospitals, medical colleges, and telemedicine platforms, featuring high-resolution surgery cameras, live-streaming systems, and recording solutions for remote diagnostics, medical training, and real-time consultation. These technologies ensure clear communication and data sharing in critical healthcare environments and medical education.",
+      industries: "Healthcare, Medical Education, Research Institutions",
+      brands: "Panasonic, AVer",
       tag: "best",
     },
     {
-      type: "electronics",
-      name: "headphones",
+      name: "Institutional Furniture",
+      taglines: "Ergonomic, Functional, Space-Smart Solutions",
       img: img5,
-      description: "lorem lorem lorem lorem",
-      price: "$50",
-      tag: "best",
+      description:
+        "As authorized partners of Godrej Interio, we supply ergonomically designed furniture solutions for educational institutions and corporate offices. Our range includes classroom desks, library seating, office workstations, and collaborative furniture that support modern pedagogy and productivity in workspaces.",
+      industries: "Education, Enterprise, Government",
+      brands: "Godrej Interio (Authorized Project Partner)",
+      tag: "featured",
     },
     {
-      type: "phones",
-      name: "consoles",
-      img: img2,
-      description: "lorem lorem lorem lorem",
-      price: "$250",
-      tag: "best",
-    },
-    {
-      type: "phones",
-      name: "headphones",
-      img: img3,
-      description: "lorem lorem lorem lorem",
-      price: "$50",
-      tag: "best",
+      name: "Air Conditioning Projects",
+      taglines: "Efficient, Scalable Climate Control",
+      img: img5,
+      description:
+        "We are institutional distributors for Panasonic Air Conditioning Systems, offering energy-efficient HVAC solutions for large-scale facilities such as educational campuses, hospitals, government offices, and commercial buildings. These systems ensure optimal indoor climate with high performance, low power consumption, and long-term reliability.",
+      industries: " Education, Healthcare, Government, Commercial",
+      brands: "Panasonic (Institutional Distributor)",
+      tag: "featured",
     },
   ];
-  const [filterItem, setFilterItem] = useState("electronics");
-  const [filteredList, setFilteredList] = useState(
-    items.filter((item) => item.type.toLowerCase() === "electronics")
-  );
-
-  const handleFiltering = (tag) => {
-    setFilterItem(tag);
-    filtering(tag);
-  };
-  const filtering = (tag) => {
-    setFilteredList(
-      items.filter((item) => item.type.toLowerCase() === tag.toLowerCase())
-    );
-  };
 
   return (
     <div className="px-8 md:px-12 mx-auto">
       <Container>
         <div className="flex flex-col gap-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4">
-            <h3 className=" text-2xl lg:text-3xl xl:text-4xl font-semibold">
-              Our services
+            <h3 className="text-2xl lg:text-3xl xl:text-4xl font-semibold">
+              Our Services
             </h3>
+          </div>
 
-            {/* <p className="text-sm lg:text-base xl:text-lg">
-              Our core focus lies in delivering tailored solutions that blend
-              cutting-edge technology, eco-conscious practices, and a commitment
-              to skill development.
-            </p> */}
-          </div>
-          <div className="flex flex-wrap gap-4">
-            {tags.map((tag, index) => (
-              <button
-                key={index}
-                onClick={() => handleFiltering(tag)}
-                className={`text-sm xl:text-base
-              ${
-                tag === filterItem
-                  ? "bg-[#0F75BC] text-white"
-                  : "text-[#0F75BC] bg-white"
-              }
-              py-2 px-3 xl:py-3 xl:px-4 rounded-full font-semibold capitalize`}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
           <div>
             <Carousel>
               <CarouselContent>
-                {filteredList?.map((list, index) => (
+                {items.map((item, index) => (
                   <CarouselItem
                     key={index}
-                    onClick={() => setOpen(true)}
+                    onClick={() => setSelectedProduct(item)}
                     className="relative cursor-pointer sm:basis-1/2 md:basis-1/3 flex flex-col justify-center items-center"
                   >
                     <img
-                      src={list.img}
-                      alt="..."
+                      src={item.img}
+                      alt={item.name}
                       className="w-full h-full object-cover"
                     />
                     <span className="text-xs md:text-base top-4 right-4 rounded-full capitalize text-white absolute py-2 px-4 bg-[#0F75BC]">
-                      {list.tag}
+                      {item.tag}
                     </span>
-                    <div className="p-4 w-full  items-center">
-                      <div>
-                        <h3 className="text-2xl xl:text-3xl font-semibold capitalize">
-                          {list.name}
-                        </h3>
-                        <p className="text-sm xl:text-base">
-                          {list.description}
-                        </p>
-                      </div>
-                      {/* <div>
-                        <h1 className="text-xl xl:text-3xl font-bold">
-                          {list.price}
-                        </h1>
-                      </div> */}
+                    <div className="p-4 w-full items-center">
+                      <h3 className="text-2xl xl:text-3xl font-semibold capitalize">
+                        {item.name}
+                      </h3>
+                      <p className="text-sm xl:text-base">{item.taglines}</p>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
             </Carousel>
           </div>
 
-          <Modal isOpen={open} onClose={() => setOpen(false)}>
-            <h2 className="text-xl font-bold mb-2">Welcome</h2>
-            <p className="mb-4 text-gray-600 dark:text-gray-300">
-              We empower institutions to create future-ready, immersive learning
-              environments by integrating smart technologies that enhance
-              teaching and student engagement. Our offerings include:
-              Interactive Smart Panels PTZ Cameras & High-Lumen Projectors Video
-              Conferencing Equipment Microphones and Speaker Phones for hybrid
-              learning environments These tools are designed to optimize both
-              physical and virtual classroom experiences, ensuring seamless
-              communication and interactive learning. Authorized Partners:
-              Panasonic, Ekin, AVer, A&T
-            </p>
-            <button
-              onClick={() => setOpen(false)}
-              className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+          {selectedProduct && (
+            <Modal
+              isOpen={!!selectedProduct}
+              onClose={() => setSelectedProduct(null)}
             >
-              Close
-            </button>
-          </Modal>
+              <div className="flex justify-end">
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="mb-2 p-2 rounded-full text-white hover:bg-gray-100 transition"
+                >
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 70 70"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.82812 0.171875L0.171875 5.82812L29.3438 35L0.171875 64.1719L5.82812 69.8281L35 40.6562L64.1719 69.8281L69.8281 64.1719L40.6562 35L69.8281 5.82812L64.1719 0.171875L35 29.3438L5.82812 0.171875Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <img
+                src={selectedProduct.img}
+                alt={selectedProduct.name}
+                className="w-full h-56 object-cover rounded-lg mb-4"
+              />
+              <h2 className="text-2xl font-bold mb-2">
+                {selectedProduct.name}
+              </h2>
+              <p className="mb-4 ">{selectedProduct.description}</p>
+              <p className="mb-2">
+                <span className="font-bold">Industries:</span>{" "}
+                {selectedProduct.industries}
+              </p>
+              <p className="mb-2">
+                <span className="font-bold">Brands:</span>{" "}
+                {selectedProduct.brands}
+              </p>
+            </Modal>
+          )}
         </div>
       </Container>
     </div>
