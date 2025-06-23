@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import React, { useState } from "react";
 import img from "../assets/images/stats.webp";
+import founderImg from "../assets/images/founder.webp";
 
 const Stats = () => {
   const cardDetails = [
@@ -75,6 +76,44 @@ const Stats = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="py-12">
+          <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-lg text-gray-800 text-center">
+            {/* Image */}
+            <img
+              src={founderImg} // replace with your actual path
+              alt="Founder"
+              className="w-28 md:w-40 h-28 md:h-40 rounded-full mx-auto object-cover shadow-md mb-4"
+            />
+
+            {/* Content */}
+            {/* <h2 className="text-xl font-semibold mb-2">Founder’s Note</h2> */}
+
+            <blockquote className="italic text-xs md:text-sm leading-relaxed mb-4">
+              “At the heart of our journey lies a simple belief — that
+              experience, when driven by purpose, can build something truly
+              meaningful.”
+            </blockquote>
+
+            <p className=" text-xs md:text-sm text-gray-700 mb-3">
+              With nearly three decades in the corporate world and a foundation
+              in engineering and marketing, I’ve always believed in merging
+              precision with passion.
+            </p>
+
+            <p className=" text-xs md:text-sm text-gray-700 mb-3">
+              Together with my co-founder,{" "}
+              <span className="font-semibold">Mr. Narayan Chandra Ghosh</span> —
+              a seasoned technocrat from NHPC — we bring a blend of industry
+              insight and integrity to everything we create. Our venture is more
+              than a business; it’s a commitment to excellence, authenticity,
+              and long-term value.
+            </p>
+
+            <p className="font-semibold text-sm md:text-base text-gray-900">
+              — Nanda Ghosh, Founder
+            </p>
           </div>
         </div>
       </Container>
