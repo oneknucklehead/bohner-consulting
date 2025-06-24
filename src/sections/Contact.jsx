@@ -207,8 +207,9 @@ const Contact = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe> */}
+
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.005328887216!2d88.3840591759984!3d22.54147313410915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027695e69aaaab%3A0xefec1a5722ccf2a0!2sClick%20Baitz!5e0!3m2!1sen!2sin!4v1732441836770!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7369.625912846051!2d88.34937274474979!3d22.54867838016441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277ae10586ec1%3A0x91d8e2680f4cafae!2sWorkzone%20office%20spaces%20-%20Saket%20Building!5e0!3m2!1sen!2sau!4v1750757081135!5m2!1sen!2sau"
             className="w-full min-h-[300px] h-full rounded-xl focus:outline-none"
             allowfullscreen=""
             loading="lazy"
