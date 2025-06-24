@@ -87,8 +87,8 @@ const SmartTech = () => {
             </h1>
             <p className="text-center text-sm sm:text-base lg:text-lg">
               <b> Intelligent Surveillance for Safer Public Spaces </b> At
-              <b> Bonheur Consulting</b>, public safety is not just a
-              priority—it is a purpose.
+              <b> Bohner Consulting</b>, public safety is not just a priority—it
+              is a purpose.
               <br />
               <br />
               Our system integrates AI-enabled cameras with advanced Video
@@ -145,7 +145,7 @@ const SmartTech = () => {
               Public Safety Through Proactive Technology
             </h1>
             <p className="text-center text-sm sm:text-base lg:text-lg">
-              Bonheur Consulting believes{" "}
+              Bohner Consulting believes{" "}
               <b>freedom of movement should not come at the cost of safety</b>.
               Our system empowers institutions to detect irregular behavior and
               threats in real time—<b>before</b> they escalate.
@@ -181,7 +181,7 @@ const SmartTech = () => {
                   </li>
                 </ul>
                 <p className="mt-4">
-                  By deploying Bonheur’s smart surveillance, institutions show
+                  By deploying Bohner's smart surveillance, institutions show
                   their commitment to safety and inclusion.
                 </p>
               </div>

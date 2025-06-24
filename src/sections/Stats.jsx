@@ -6,7 +6,7 @@ import founderImg from "../assets/images/founder.webp";
 const Stats = () => {
   const cardDetails = [
     {
-      heading: "3+",
+      heading: "1+",
       description: "Years of operation",
     },
     {
