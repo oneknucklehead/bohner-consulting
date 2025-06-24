@@ -26,62 +26,62 @@ const Products = () => {
       img: img5,
       taglines: "Interactive, Immersive, Future-Ready Learning",
       description:
-        "We design and implement state-of-the-art Smart Classroom solutions...",
+        "We empower institutions to create future-ready, immersive learning environments by integrating smart technologies that enhance teaching and student engagement. Our offerings include: 1. Interactive Smart Panels, 2. PTZ Cameras & High-Lumen Projectors, 3. Video Conferencing Equipment, 4. Microphones and Speaker Phones for hybrid learning environments, These tools are designed to optimize both physical and virtual classroom experiences, ensuring seamless communication and interactive learning.",
       industries: " Education (K-12, Higher Ed, Coaching Institutes)",
       brands: "Panasonic, ViewSonic, AVer, A&T, Ekin",
-      tag: "best",
+      // tag: "best",
     },
     {
       name: "Security & Surveillance",
       img: img4,
       taglines: "Smart, Secure, Always Vigilant",
       description:
-        "Our AI-powered surveillance solutions provide round-the-clock security...",
+        "Security is no longer optional—it’s essential. We provide a comprehensive range of high-performance surveillance products that ensure superior image quality, 24/7 monitoring, and advanced threat detection. Our systems are ideal for: 1. Schools and Universities, 2. Enterprises and Corporate Offices, 3. Government Buildings and Public Spaces, 4. Residential and Commercial Complexes. Features include AI-driven motion detection, facial recognition, and cloud-based monitoring systems, ensuring complete control and real-time alerting.",
       industries:
         "Education, Enterprise, Government, Residential, Retail, Construction",
       brands: "Panasonic (Authorized Distributor)",
-      tag: "popular",
+      // tag: "popular",
     },
     {
       name: "Telecom & Connectivity",
       img: img6,
       taglines: "Unified, Scalable, Seamless Communication",
       description:
-        "We offer a full range of Telecom and Communication solutions...",
+        "We offer robust, scalable communication infrastructure and security solutions for both commercial and residential applications: 1. IP-PBX and SIP Servers, 2. Unified Communication Platforms with SIP Phones, 3. VoIP Gateways and Conventional PBX Systems, 4. Corded and Cordless Analog Telephones. In the home security segment, we specialize in: 1. Analog, IP, and Hybrid Video Door Phones, 2. Home CCTV Systems with smart control features.",
       industries:
         " Education, Enterprise, Government, Hospitality, Residential",
       brands: "Panasonic, Grandstream",
-      tag: "new",
+      // tag: "new",
     },
     {
       name: "Healthcare AV & Streaming",
       img: img2,
       taglines: "Precision, Clarity, Medical Reach",
       description:
-        "Our Healthcare AV solutions are tailored for hospitals, medical colleges...",
+        "We enable digital healthcare delivery and medical education through state-of-the-art AV solutions, ideal for hospitals, operation theatres, and teaching institutions. Our specialized healthcare AV systems include: 1. High-Resolution Medical Cameras for Surgery Recording, 2. Live Broadcasting for Telemedicine and Remote Consultations, 3. Integration with Lecture Halls and Medical Seminars. These solutions improve accessibility, documentation, and patient care outcomes.",
       industries: "Healthcare, Medical Education, Research Institutions",
       brands: "Panasonic, AVer",
-      tag: "best",
+      // tag: "best",
     },
     {
       name: "Institutional Furniture",
       taglines: "Ergonomic, Functional, Space-Smart Solutions",
       img: img3,
       description:
-        "As authorized partners of Godrej Interio, we supply ergonomically designed furniture...",
+        "We are proud to be authorized project partners for Godrej Interio, providing ergonomic, durable, and aesthetically designed furniture solutions for: 1. Educational Institutions (Classroom, Lab, and Library Furniture), 2. Corporate Offices and Administrative Spaces, Our offerings are designed to enhance comfort, collaboration, and space utilization.",
       industries: "Education, Enterprise, Government",
       brands: "Godrej Interio (Authorized Project Partner)",
-      tag: "featured",
+      // tag: "featured",
     },
     {
       name: "Air Conditioning Projects",
       taglines: "Efficient, Scalable Climate Control",
       img: img1,
       description:
-        "We are institutional distributors for Panasonic Air Conditioning Systems...",
+        "As an institutional distributor of Panasonic Air Conditioners, we supply and install energy-efficient, high-capacity air conditioning systems for: 1. Large Educational Campuses, 2. Hospitals and Healthcare Facilities, 3. Government and Public Sector Projects, 4. Commercial Buildings and Offices. Our HVAC solutions ensure optimal indoor climate control with long-term reliability and operational efficiency.",
       industries: " Education, Healthcare, Government, Commercial",
       brands: "Panasonic (Institutional Distributor)",
-      tag: "featured",
+      // tag: "featured",
     },
   ];
 
@@ -105,9 +105,9 @@ const Products = () => {
                     className="relative cursor-pointer sm:basis-1/2 md:basis-1/3 flex h-full flex-col justify-center items-center"
                   >
                     <ImageWithSkeleton src={item.img} alt={item.name} />
-                    <span className="text-xs md:text-base top-4 right-4 rounded-full capitalize text-white absolute py-2 px-4 bg-[#0F75BC]">
+                    {/* <span className="text-xs md:text-base top-4 right-4 rounded-full capitalize text-white absolute py-2 px-4 bg-[#0F75BC]">
                       {item.tag}
-                    </span>
+                    </span> */}
                     <div className="p-4 w-full items-center">
                       <h3 className="text-2xl xl:text-3xl font-semibold capitalize">
                         {item.name}
@@ -151,7 +151,7 @@ const Products = () => {
                 alt={selectedProduct.name}
                 className="w-full h-56 object-cover rounded-lg mb-4"
               />
-              <h2 className="text-2xl font-bold mb-2">
+              <h2 className="text-2xl font-bold my-2">
                 {selectedProduct.name}
               </h2>
               <p className="mb-4 ">{selectedProduct.description}</p>
